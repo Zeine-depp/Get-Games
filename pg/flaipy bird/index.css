@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #70c5ce;
+}
+
+#game {
+    position: relative;
+    width: 400px;
+    height: 600px;
+    overflow: hidden;
+    border: 2px solid #000;
+}
+
+#bird {
+    position: absolute;
+    bottom: 250px;
+    left: 50px;
+    width: 30px;
+    height: 30px;
+    background-color: yellow;
+    border-radius: 50%;
+}
+
+.pipe {
+    position: absolute;
+    width: 50px;
+    background-color: green;
+    right: -50px;
+    animation: pipe-animation 4s linear infinite;
+}
+
+@keyframes pipe-animation {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-200px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
